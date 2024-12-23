@@ -20,12 +20,15 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  _buildTheme() {
-    return ThemeData(
-      brightness: Brightness.dark,
-      primaryColor: Color(0xFF212121),
-      accentColor: Colors.deepOrange,
-      primarySwatch: Colors.deepOrange,
-    );
-  }
+_buildTheme() {
+  return ThemeData(
+    brightness: Brightness.dark,
+    primaryColor: Color(0xFF212121),
+    colorScheme: ColorScheme.dark(
+      primary: Color(0xFF212121),  // Cor primária
+      secondary: Colors.deepOrange, // Cor de destaque
+    ),
+    primarySwatch: Colors.deepOrange,
+  );
+}
 }

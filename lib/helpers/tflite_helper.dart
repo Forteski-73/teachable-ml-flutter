@@ -27,10 +27,13 @@ class TFLiteHelper {
       asynch: true,
     );
 
-    output.forEach((value) {
-      final element = TFLiteResult.fromModel(value);
-      outputs.add(element);
-    });
+    // Verificar se output não é null
+    if (output != null) {
+      output.forEach((value) {
+        final element = TFLiteResult.fromModel(value);
+        outputs.add(element);
+      });
+    }
 
     print(outputs);
 

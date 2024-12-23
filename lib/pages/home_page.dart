@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  File _image;
+  File? _image;  // Agora é um tipo nullable (pode ser nulo)
   List<TFLiteResult> _outputs = [];
 
   @override
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
             child: _image == null
                 ? Text('Sem imagem')
                 : Image.file(
-                    _image,
+                    _image!,
                     fit: BoxFit.cover,
                   ),
           ),
